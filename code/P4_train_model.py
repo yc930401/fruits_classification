@@ -61,21 +61,18 @@ model.add(Dense(num_classes, activation='softmax'))
 model.summary()
 
 model.compile(loss=keras.losses.categorical_crossentropy,
-                #optimizer=keras.optimizers.SGD(lr=1e-3),
-                optimizer = keras.optimizers.Adam(lr=1e-3),
+                #optimizer=keras.optimizers.SGD(lr=3e-5),
+                optimizer = keras.optimizers.Adam(lr=3e-5, decay=1e-6),
                 metrics=['accuracy'])
-
-# check-points
-filepath="weights-improvement-{epoch:02d}-{val_acc:.4f}.hdf5"
-checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='min')
-callbacks_list = [checkpoint]
 
 run = model.fit(x_train, y_train,
                   batch_size=batch_size,
                   epochs=epochs,
                   verbose=1,
-                  validation_data=(x_valid, y_valid),
-                  callbacks=callbacks_list)
+                  validation_data=(x_valid, y_valid)#,
+                  )#callbacks=callbacks_list
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
+
+model.save('/Workspace-Github/fruit_classification/code/model_CNN.h5')

@@ -39,3 +39,10 @@ array([[17,  4,  9,  8], </br>
 
 SVM: </br>
 I tried very small datasset, gridsearch shows that kernel = 'poly', C = 1, degree = 3 is the best model. But I cannot run it on the whole dataset. Very slow. Will try later.
+
+## Reference
+https://keras.io/applications/ </br>
+http://blog.yhat.com/posts/image-classification-in-Python.html </br>
+https://datascience.stackexchange.com/questions/8847/feature-extraction-of-images-in-python </br>
+https://benanne.github.io/2015/03/17/plankton.html </br>
+http://image-net.org/synset?wnid=n07749582#

@@ -2,7 +2,7 @@ import numpy as np
 import sys
 sys.path.insert(0, '/Workspace-Github/fruit_classification/code')
 import P3_generate_data as generate
-from sklearn.decomposition import RandomizedPCA
+from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score, f1_score
 
@@ -11,7 +11,7 @@ n_component = 6
 x_train, x_valid, x_test, y_train, y_valid, y_test = generate.get_data()
 x_train = [x.reshape(1, -1)[0] for x in x_train]
 x_test = [x.reshape(1, -1)[0] for x in x_test]
-pca = RandomizedPCA(n_components=n_component)
+pca = PCA(svd_solver='randomized', n_components=n_component)
 x_train = pca.fit_transform(x_train)
 x_test = pca.transform(x_test)
 print(pca.explained_variance_ratio_)

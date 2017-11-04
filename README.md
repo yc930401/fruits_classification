@@ -39,15 +39,15 @@ Recall score: 0.48275862068965519 </br>
 F1 score: 0.46517553279181567 </br>
 
 Naive Bayes: </br>
-Confusion matrix:  
-[[32  2  3  8]
- [ 0 34  3  1]
- [ 2 11 20 14]
- [17  7  8 12]]
-Accuracy score:  0.563218390805
-Precision score:  0.54536777674
-Recall score:  0.563218390805
-F1 score:  0.544045526854
+Confusion matrix:  </br>
+[[32  2  3  8] </br>
+ [ 0 34  3  1] </br>
+ [ 2 11 20 14] </br>
+ [17  7  8 12]] </br>
+Accuracy score:  0.563218390805 </br>
+Precision score:  0.54536777674 </br>
+Recall score:  0.563218390805 </br>
+F1 score:  0.544045526854 </br>
 
 ## Reference
 https://keras.io/applications/ </br>

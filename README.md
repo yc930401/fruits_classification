@@ -2,7 +2,7 @@
 For JJ's ML project
 
 ## Introduction
-Some fruits look very similar and very difficult to distinguish, e.g. lemon, orange, tangerine and grapefruit. In this project, I build several fruit classifiers using CNN, KNN, Inception V3 and SVM. </br>
+Some fruits look very similar and very difficult to distinguish, e.g. lemon, orange, tangerine and grapefruit. In this project, I build several fruit classifiers using CNN, KNN, Inception V3 and Naive Bayes. </br>
 ![fruits](/fruits.png)
 
 ## Methodology

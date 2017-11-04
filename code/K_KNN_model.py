@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, accuracy_score, f1_score
 
 ## PCA to reduce dimension
-n_component = 10
+n_component = 6
 x_train, x_valid, x_test, y_train, y_valid, y_test = generate.get_data()
 x_train = [x.reshape(1, -1)[0] for x in x_train]
 x_test = [x.reshape(1, -1)[0] for x in x_test]
@@ -19,7 +19,7 @@ print(pca.explained_variance_ratio_)
 print('train', np.shape(x_train))
 print('test', np.shape(x_test))
 ## KNN model
-knn = KNeighborsClassifier(n_neighbors = 3, weights = 'distance')#, weights = 'distance')
+knn = KNeighborsClassifier(n_neighbors = 10, weights = 'distance')#, weights = 'distance')
 knn.fit(x_train, y_train)
 y_pred = knn.predict(x_test)
 

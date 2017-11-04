@@ -2,11 +2,13 @@
 For JJ's ML project
 
 ## Introduction
-Some fruits look very similar and very difficult to distinguish, e.g. lemon, orange, tangerine and grapefruit. In this project, I build several fruit classifiers using CNN, KNN, Inception V3 and SVM.
+Some fruits look very similar and very difficult to distinguish, e.g. lemon, orange, tangerine and grapefruit. In this project, I build several fruit classifiers using CNN, KNN, Inception V3 and SVM. </br>
+![fruits](/fruits.png)
 
 ## Methodology
 1. Download images from imagenet and google images.
-2. Preprocess images. (e.g.resize, rotate, flip) It is very neccessary to preprocess thoese images because, it can reduce overfitting problem and increase the size of the training dataset.
+2. Preprocess images. (e.g.resize, rotate, flip) It is very neccessary to preprocess thoese images because, it can reduce overfitting problem and increase the size of the training dataset. <br>
+![fruits](/preprocess.png)
 3. Train models and test.
 
 ## Result

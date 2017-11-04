@@ -6,8 +6,9 @@ Some fruits look very similar and very difficult to distinguish, e.g. lemon, ora
 ![fruits](/fruits.png)
 
 ## Methodology
-1. Download images from imagenet and google images.
+1. Download images from imagenet and google images. 
 2. Preprocess images. (e.g.resize, rotate, flip) It is very neccessary to preprocess thoese images because, it can reduce overfitting problem and increase the size of the training dataset. <br>
+After preprocessing, I have more than 19900 training samples and more than 400 each for evaluation and test.
 ![fruits](/preprocess.png)
 3. Train models and test.
 

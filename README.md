@@ -14,8 +14,13 @@ After preprocessing, I have more than 19900 training samples and more than 400 e
 
 ## Result
 
+Accuracy, Precisipn, Recall, F1 scores and confusion matrix: </br>
 ![fruits](/scores.png)
+</br>
+Compare different classifiers: </br>
 ![fruits](/plot.png)
+</br>
+Telegram interface for user to upload photos: </br>
 ![fruits](/telegram.png)
 
 InceptionV3: </br>

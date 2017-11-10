@@ -16,6 +16,7 @@ After preprocessing, I have more than 19900 training samples and more than 400 e
 
 ![fruits](/scores.png)
 ![fruits](/plot.png)
+![fruits](/telegram.png)
 
 InceptionV3: </br>
 This overfits test examples badly. I add dropoutlayer to the model but it doesn't work. The base layers do not seem to have any dropout layers. I'll try to figure out the reason later. </br>

@@ -11,7 +11,7 @@ def start(bot, update):
     
     update.message.reply_text('Hello' + update.message.from_user.first_name + '!')
 
-def reply(bot, update):
+def reply_photo(bot, update):
     
     print('Telegram Receive msg !!!')
     file_id = update.message.photo[-1]['file_id']
@@ -21,14 +21,14 @@ def reply(bot, update):
     print('response: ', response)
     bot.send_message(chat_id=update.message.chat_id, text=response)
    
-def reply2(bot, update):
+def reply_text(bot, update):
     
     bot.send_message(chat_id=update.message.chat_id, text='Please send me a photo!')
     
 # declaring handlers
 updater = Updater(TOKEN)
-#message_handler = MessageHandler(Filters.text, reply2)
-message_handler = MessageHandler(Filters.all, reply)
+message_handler = MessageHandler(Filters.text, reply_text)
+message_handler = MessageHandler(Filters.photo, reply_photo)
 start_handler = CommandHandler('start', start)
 
 # adding handlers

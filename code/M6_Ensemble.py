@@ -19,10 +19,10 @@ pca = PCA(svd_solver='randomized', n_components=n_component)
 x_train = pca.fit_transform(x_train)
 x_test = pca.transform(x_test)
 
-models = [ensemble.RandomForestClassifier(max_features = 1, oob_score = True, random_state = 2017),
-          ensemble.BaggingClassifier(tree.DecisionTreeClassifier(), max_samples = 0.5, max_features = 1, oob_score = True, random_state = 2017),
-          ensemble.ExtraTreesClassifier(max_features = 1, bootstrap = True, oob_score = True, random_state = 2017),
-          ensemble.AdaBoostClassifier(tree.DecisionTreeClassifier(max_depth = 2), n_estimators = 10, algorithm ='SAMME', random_state = 2017),
+models = [ensemble.RandomForestClassifier(max_features = 0.5, oob_score = True, random_state = 2017),
+          ensemble.BaggingClassifier(tree.DecisionTreeClassifier(), max_samples = 0.5, max_features = 0.8, oob_score = True, random_state = 2017),
+          ensemble.ExtraTreesClassifier(max_features = 0.8, bootstrap = True, oob_score = True, random_state = 2017),
+          ensemble.AdaBoostClassifier(tree.DecisionTreeClassifier(max_depth = 15), n_estimators = 10, algorithm ='SAMME', random_state = 2017),
           ensemble.GradientBoostingClassifier(n_estimators = 10, random_state = 2017)]
 
 names = ['Random_Forest', 'Bagging', 'ExtraTrees', 'AdaBoost', 'Gradient_Boosting']

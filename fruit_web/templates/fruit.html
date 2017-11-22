@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruit Classifier</title>
+</head>
+
+
+<body background="https://b-ssl.duitang.com/uploads/item/201605/20/20160520120624_fFhtr.jpeg"
+      style="background-size:300% 300%;background-repeat:no-repeat;">
+    <div style="text-align: center;">
+        <h2>Fruit Classifier</h2>
+
+        <form action="" method="post", enctype="multipart/form-data">{% csrf_token %}
+            <input type="file" name="im", accept="image/gif, image/jpeg, image/png">
+            <input type="submit" value="Upload">
+        </form>
+
+        <br/>
+        <table cellspacing="0px" cellpadding="0px" border="2" style="margin:auto;">
+            <tr>
+                <th width="16%" height="43px">Fruit</th>
+                <th width="16%" height="43px">Probability</th>
+            </tr>
+            {% for fruit in fruit_list %}
+                <tr>
+                    <th width="16%" height="42px">{{ fruit.name }}</th>
+                    <th width="16%" height="42px">{{ fruit.probability }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Uploaded Fruit</h2>
+        {% if im %}
+            {% load static %}
+            <img src="{% static 'test.jpg' %}" alt="Image", height="200" width="200"
+                 style="filter: alpha(opacity=50); opacity:0.5;"/>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -22,6 +22,9 @@ Compare different classifiers: </br>
 </br>
 Telegram interface for user to upload photos: </br>
 ![fruits](/telegram.png)
+</br>
+Django Website to classify images: </br>
+![fruits](/web.png)
 
 InceptionV3: </br>
 This overfits test examples badly. I add dropoutlayer to the model but it doesn't work. The base layers do not seem to have any dropout layers. I'll try to figure out the reason later. </br>
